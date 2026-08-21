@@ -494,30 +494,112 @@
             }
         }
 
-        @media (max-width: 760px) {
-            .sidebar {
-                display: none;
-            }
+      @media (max-width: 760px) {
 
-            .main {
-                margin-left: 0;
-                width: 100%;
-                padding: 22px;
-            }
+    .app {
+        display: block;
+    }
 
-            .stats {
-                grid-template-columns: 1fr;
-            }
+    .sidebar {
+        display: block;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        min-height: auto;
+        padding: 14px 16px;
+        z-index: 1000;
+        background: linear-gradient(90deg, #111827, #1e3a8a);
+    }
 
-            .header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+    .logo {
+        font-size: 23px;
+        margin-bottom: 12px;
+    }
 
-            .profile-card {
-                grid-template-columns: 1fr;
-            }
-        }
+    .nav {
+        flex-direction: row;
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        scrollbar-width: none;
+    }
+
+    .nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-button {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+        padding: 18px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .profile-badge {
+        padding: 10px 14px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 18px;
+    }
+
+    .stat-card h2 {
+        font-size: 25px;
+    }
+
+    .content-grid,
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        grid-template-columns: 1fr;
+    }
+
+    .opportunity-top {
+        flex-direction: column;
+    }
+
+    .save-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .main {
+        padding: 14px;
+    }
+}
     </style>
 </head>
 
